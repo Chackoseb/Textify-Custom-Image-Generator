@@ -1,0 +1,106 @@
+        /* Apply some basic resets */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            padding: 20px;
+            background: linear-gradient(135deg, #f0f0f0 50%, #ffffff 50%);
+            overflow-y: auto;
+            color: #333;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .input-group {
+            width: 100%;
+            max-width: 400px;
+            margin-bottom: 15px;
+        }
+
+        .input-group label {
+            font-weight: 600;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .input-group select, 
+        .input-group input, 
+        .input-group textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        #textInput {
+            height: 120px;
+            resize: vertical;
+        }
+
+        #generateBtn, #downloadBtn {
+            padding: 12px 25px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        #generateBtn:hover, #downloadBtn:hover {
+            background-color: #0056b3;
+        }
+
+        #downloadBtn {
+            background-color: #28a745;
+            display: none;
+        }
+
+        #canvasContainer {
+            margin-top: 30px;
+        }
+
+        canvas {
+            max-width: 100%;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        /* Responsive layout */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 1.75rem;
+            }
+
+            .input-group {
+                max-width: 100%;
+            }
+
+            #generateBtn, #downloadBtn {
+                width: 100%;
+                margin: 10px 0;
+            }
+        }

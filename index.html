@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Textify: Custom Image Generator</title>
+    <!-- Link to Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png" />
+    <link rel="manifest" href="/favicon_io/site.webmanifest" />
+  </head>
+  <body>
+    <h1>Text to Image Generator</h1>
+    <!-- #b02eff -->
+
+    <div class="input-group">
+      <label for="textInput">Enter your text</label>
+      <textarea id="textInput" placeholder="Enter your text here"></textarea>
+    </div>
+
+    <div class="input-group">
+      <label for="resolutionDropdown">Choose resolution</label>
+      <select id="resolutionDropdown">
+        <option value="square">Square (500x500)</option>
+        <option value="rectangle">Rectangle (600x400)</option>
+      </select>
+    </div>
+
+    <div class="input-group">
+      <label for="colorDropdown">Select background color</label>
+      <select id="colorDropdown">
+        <option value="yellow">Yellow</option>
+        <option value="red">Red</option>
+        <option value="blue">Blue</option>
+        <option value="green">Green</option>
+        <option value="purple">Purple</option>
+      </select>
+    </div>
+
+    <div class="input-group">
+      <label for="hexInput">Or enter a hex color code</label>
+      <input type="text" id="hexInput" placeholder="e.g., #ff0000" />
+    </div>
+
+    <div class="input-group">
+      <label for="fontColorInput">Choose font color</label>
+      <input type="color" id="fontColorInput" value="#000000" />
+    </div>
+
+    <div class="input-group">
+      <label for="fontDropdown">Select font</label>
+      <select id="fontDropdown">
+        <option value="Arial">Arial</option>
+        <option value="Times New Roman">Times New Roman</option>
+        <option value="Verdana">Verdana</option>
+        <option value="Georgia">Georgia</option>
+        <option value="Courier New">Courier New</option>
+      </select>
+    </div>
+
+    <div class="input-group">
+      <label for="alignmentDropdown">Text alignment</label>
+      <select id="alignmentDropdown">
+        <option value="center">Center</option>
+        <option value="left">Left</option>
+        <option value="right">Right</option>
+      </select>
+    </div>
+
+    <div class="input-group">
+      <label for="fontSizeInput">Font size</label>
+      <input
+        type="number"
+        id="fontSizeInput"
+        placeholder="Font Size (e.g., 30)"
+        min="10"
+        max="100"
+        value="30"
+      />
+    </div>
+
+    <button id="generateBtn">Generate Image</button>
+
+    <div id="canvasContainer">
+      <canvas id="textCanvas"></canvas>
+    </div>
+    <button id="downloadBtn">Download Image</button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
